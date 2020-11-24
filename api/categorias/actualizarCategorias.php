@@ -29,10 +29,10 @@
         
         header('Content-type: application/json; charset=utf-8');
         if($statement){
-            $json_array = json_encode(array("estado" => "1", "return" => $resultado));
+            $json_array = json_encode(array("estado" => "1", "return" => $statement));
             echo $json_array;
         }else{
-            $json_array = json_encode(array("estado" => "0", "return" => $resultado));
+            $json_array = json_encode(array("estado" => "0", "return" => $statement));
             echo $json_array;
         }
 ?>
