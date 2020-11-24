@@ -13,7 +13,7 @@
             // conexion con base de datos
             $con = $conexion->getConexion();
     
-            $querySQL = "SELECT id_categoria, nom_categoria FROM tb_categorias";
+            $querySQL = "SELECT id_producto, nom_producto, des_producto, stock, precio, unidad_medida, estado_producto, categoria, fecha_entrada FROM tb_productos";
             $resultado = $con->query($querySQL);
             $resultado = $resultado->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode($resultado);
